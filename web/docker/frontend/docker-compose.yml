@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  web-frontend:
+    image: node:18.18.0-slim
+    container_name: web-frontend
+    volumes:
+      - ../../src/frontend:/frontend
+      - ../../src/main/resources/templates:/frontend/dist/templates
+      - ../../src/main/resources/static:/frontend/dist/static
+      - volume_trick:/frontend/node_modules
+    working_dir: /frontend
+    tty: true
+
+volumes:
+  volume_trick:
