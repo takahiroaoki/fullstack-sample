@@ -1,12 +1,13 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
     'demo': path.resolve(__dirname, './src/pages/demo/index.ts')
   },
   output: {
-    path: path.resolve(__dirname, 'build/static/pages'),
-    filename: '[name]/index.js',
+    path: path.resolve(__dirname, 'build'),
+    filename: 'static/pages/[name]/index.js',
   },
   resolve: {
     extensions: ['.ts'],
@@ -20,4 +21,10 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+			filename: 'templates/pages/demo/index.html',
+			template: './src/pages/demo/index.html',
+		}),
+  ]
 };
