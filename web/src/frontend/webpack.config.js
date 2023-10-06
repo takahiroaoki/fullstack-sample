@@ -23,6 +23,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      inject: false,
 			filename: 'templates/pages/demo/index.html',
 			template: './src/pages/demo/index.html',
 		}),
