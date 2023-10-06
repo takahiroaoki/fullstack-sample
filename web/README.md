@@ -2,7 +2,7 @@
 
 ## Development
 ```
-$ cd docker/frontend
+# @project-format/web
 $ docker compose up -d
 $ docker exec -it web-frontend /bin/bash
 
