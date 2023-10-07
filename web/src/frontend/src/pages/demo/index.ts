@@ -1,7 +1,12 @@
 import './index.scss'
 
+import Greeting from './greeting/greeting'
+
 function Index() {
-    console.log('hello world')
+    const greeting: Greeting = new Greeting('greeting')
+    greeting.onClick(() => {
+        alert('clicked!!')
+    })
 }
 
 Index()
