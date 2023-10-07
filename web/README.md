@@ -1,5 +1,7 @@
 # web
 
+This is a demo application which has web pages.
+
 ## Requirement
 - Docker Desktop
 - Amacon Corretto 17.0
