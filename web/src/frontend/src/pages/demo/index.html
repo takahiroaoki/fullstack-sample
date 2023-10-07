@@ -11,7 +11,7 @@
 <th:block th:fragment="mainContents">
   <h1>This is the demo page.</h1>
 
-  <th:block th:replace="~{pages/demo/greeting/greeting :: greeting(greeting, test)}"></th:block>
+  <th:block th:replace="~{pages/demo/greeting/greeting :: greeting(greeting, ${view.greeting})}"></th:block>
 </th:block>
 
 </html>

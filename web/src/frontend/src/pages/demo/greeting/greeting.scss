@@ -1,7 +1,9 @@
 .greeting {
     background-color: blueviolet;
+    padding: 20px;
+    cursor: pointer;
 
     &__message {
-        color: cadetblue;
+        color: gold;
     }
 }

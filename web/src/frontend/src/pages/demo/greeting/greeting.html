@@ -1,5 +1,5 @@
 <th:block th:fragment="greeting (componentId, data)">
     <div class="greeting" th:componentId="${componentId}">
-        <p class="greeting__message" th:text="${data}"></p>
+        <p class="greeting__message" th:text="${data.message}"></p>
     </div>
 </th:block>
