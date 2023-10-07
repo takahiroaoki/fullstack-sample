@@ -42,7 +42,12 @@ Then get access to the demo page (http://localhost:8080/demo)
 
 ## Architecture
 
-## Class architecture of backend
+### Frontend
+
+<img width="355" alt="image" src="https://github.com/takahiroaoki/project-format/assets/69064981/b588f240-0a39-4208-8c11-e124a3504cac">
+
+
+### Backend
 
 <img width="836" alt="image" src="https://github.com/takahiroaoki/project-format/assets/69064981/8cb2273c-e9f0-4c2a-82b7-e12d9fd670a0">
 
