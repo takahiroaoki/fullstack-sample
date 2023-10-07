@@ -1,14 +1,21 @@
 # web
 
+## Requirement
+- Docker Desktop
+- Amacon Corretto 17.0
+- Apache Maven 3.9
+
 ## Tech Stack
-Frontend
-- TypeScript 5.5
-- Webpack 5.88
+### Frontend
+- TypeScript
+- Webpack
 - Sass
 
-Backend
-- Amazon Corretto 17.0
-- Apache Maven 3.9
+Frontend source is built on docker container.
+
+### Backend
+- Java
+- Apache Maven
 
 ## Development
 
