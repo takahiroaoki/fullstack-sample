@@ -42,6 +42,11 @@ Then get access to the demo page (http://localhost:8080/demo)
 
 ## Architecture
 
+## Class architecture of backend
+
+<img width="836" alt="image" src="https://github.com/takahiroaoki/project-format/assets/69064981/8cb2273c-e9f0-4c2a-82b7-e12d9fd670a0">
+
+
 ## Directory
 ### Frontend
 
