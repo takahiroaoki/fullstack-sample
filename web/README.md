@@ -55,7 +55,7 @@ The directory of frontend/build/ is bind-mounted to the directory of resources/ 
 
 frontend/src/
 - common/
-  - components/${component}
+  - components/${component}/
   - layout/
 - pages/
   - ${page}/
