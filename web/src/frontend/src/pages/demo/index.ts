@@ -2,11 +2,14 @@ import './index.scss'
 
 import Greeting from './greeting/greeting'
 
-function Index() {
+(function Index() {
+    // Mount components
     const greeting: Greeting = new Greeting('greeting')
+
+    // Setting for components
     greeting.onClick(() => {
         alert('clicked!!')
     })
-}
 
-Index()
+    // Sub methods for use in this function
+})()
