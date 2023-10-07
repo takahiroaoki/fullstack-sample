@@ -43,6 +43,25 @@ Then get access to the demo page (http://localhost:8080/demo)
 ## Architecture
 
 ## Directory
+### Frontend
+
+The all html-files are copied into frontend/build/templates directory.
+
+The all ts-files are bundled and transpiled into frontend/build/static/pages/${page}/index.js.
+
+The all scss-files are bundled and compiled into frontend/build/static/pages/${page}/index.css.
+
+The directory of frontend/build/ is bind-mounted to the directory of resources/ in backend source.
+
+frontend/src/
+- common/
+  - components/${component}
+  - layout/
+- pages/
+  - ${page}/
+    - ${component}/
+    - index.html, index.scss, index.ts
+
 ### Backend
 
 The directories are split in the order of "Object Type -> Page -> Action".
