@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:fragment="layout (customHead, mainContents)">
+<head>
+    <!-- [START] common settings -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" th:href="@{/pages/demo/index.css}" >
+    <!-- [END] common settings -->
+    <th:block th:replace="${customHead}"></th:block>
+</head>
+<body>
+    <div class="main-contents">
+        <th:block th:replace="${mainContents}">mainContents</th:block>
+    </div>
+    <!-- [START] common settings -->
+    <script defer th:src="@{/pages/demo/index.js}"></script>
+    <!-- [END] common settings -->
+</body>
+</html>

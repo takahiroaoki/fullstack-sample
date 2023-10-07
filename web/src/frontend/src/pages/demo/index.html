@@ -1,9 +1,12 @@
-<html>
-  <head>
-    <link rel="stylesheet" th:href="@{/pages/demo/index.css}" >
-  </head>
-  <body>
-    <h1 class="h1">This is a demo page.</h1>
-    <script defer th:src="@{/pages/demo/index.js}"></script>
-  </body>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout/layout :: layout (~{::customHead}, ~{::mainContents})}">
+<!-- Add contents into head tag -->
+<th:block th:fragment="customHead">
+  <title>demo page</title>
+</th:block>
+<!-- Add contents into body tag -->
+<th:block th:fragment="mainContents">
+  <h1>test</h1>
+</th:block>
 </html>
