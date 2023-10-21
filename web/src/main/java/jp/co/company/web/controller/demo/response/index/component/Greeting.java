@@ -1,4 +1,4 @@
-package jp.co.company.web.dto.response.demo.index.component;
+package jp.co.company.web.controller.demo.response.index.component;
 
 import lombok.Data;
 
