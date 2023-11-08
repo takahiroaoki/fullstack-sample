@@ -10,7 +10,7 @@ import AjaxUtil from '../../common/modules/ajax-util'
 
     // Setting for components
     greeting.onClick(() => {
-        AjaxUtil.getAxiosInstance().get('http://localhost:8080/demo/items').then((res: AxiosResponse<any>) => {
+        AjaxUtil.getAxiosInstance().get('http://localhost:8080/demo/sample/items').then((res: AxiosResponse<any>) => {
             const { data, status } = res
             if (status === 200) {
                 console.log(data)

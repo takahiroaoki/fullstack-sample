@@ -1,12 +1,12 @@
-package jp.co.company.web.controller.demo;
+package jp.co.company.web.controller.sample;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import jp.co.company.web.controller.demo.helper.index.IndexHelper;
-import jp.co.company.web.controller.demo.response.index.View;
+import jp.co.company.web.controller.sample.helper.index.IndexHelper;
+import jp.co.company.web.controller.sample.response.index.View;
 import jp.co.company.web.dto.session.SampleSessionData;
 
 @Controller

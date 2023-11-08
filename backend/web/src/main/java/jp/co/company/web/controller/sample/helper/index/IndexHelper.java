@@ -1,6 +1,6 @@
-package jp.co.company.web.controller.demo.helper.index;
+package jp.co.company.web.controller.sample.helper.index;
 
-import jp.co.company.web.controller.demo.response.index.component.Greeting;
+import jp.co.company.web.controller.sample.response.index.component.Greeting;
 
 public class IndexHelper {
     public static Greeting getGreeting() {
