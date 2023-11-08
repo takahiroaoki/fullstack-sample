@@ -10,7 +10,7 @@ import jp.co.company.web.controller.demo.response.index.View;
 import jp.co.company.web.dto.session.SampleSessionData;
 
 @Controller
-@RequestMapping("/demo")
+@RequestMapping("/sample")
 public class IndexController {
     private final SampleSessionData sampleSessionData;
 
@@ -25,6 +25,6 @@ public class IndexController {
         View view = new View();
         view.setGreeting(IndexHelper.getGreeting());
         model.addAttribute("view", view);
-        return "pages/demo/index";
+        return "pages/sample/index";
     }
 }

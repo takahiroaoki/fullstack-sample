@@ -38,7 +38,7 @@ Backend Build with development mode
 $ mvn spring-boot:run
 ```
 
-Then get access to the demo page (http://localhost:8080/demo)
+Then get access to the demo page (http://localhost:8080/demo/sample)
 
 ## Architecture
 
