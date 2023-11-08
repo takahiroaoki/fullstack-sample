@@ -6,8 +6,8 @@ services:
     container_name: demo-frontend
     volumes:
       - ../frontend:/frontend
-      - ../backend/web/src/main/resources/templates:/frontend/build/templates
-      - ../backend/web/src/main/resources/static:/frontend/build/static
+      - ../backend/demo/src/main/resources/templates:/frontend/build/templates
+      - ../backend/demo/src/main/resources/static:/frontend/build/static
       - volume_trick:/frontend/node_modules
     working_dir: /frontend
     tty: true

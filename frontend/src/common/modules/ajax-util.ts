@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
 
-export default class AjaxUtil {
+export class AjaxUtil {
     static getAxiosInstance = (): AxiosInstance => {
         return axios.create({
             headers: {

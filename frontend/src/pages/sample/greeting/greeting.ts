@@ -1,9 +1,18 @@
-import BaseComponent from "../../../common/modules/base-component";
+import { EventSetting, ViewModel } from "../../../common/modules/view-model"
 
-export default class Greeting extends BaseComponent {
-    onClick(fn: Function) {
-        this.getElement()?.addEventListener('click', () => {
-            fn()
-        })
+type State = {}
+
+export class Greeting extends ViewModel<State> {
+    protected getEventSettings(): EventSetting[] {
+        return [
+            {
+                selector: '.greeting__message',
+                eventName: 'click',
+                callback: () => {
+                    window.alert('clicked!')
+                    this.emit('custom_sample_click')
+                }
+            },
+        ]
     }
 }
