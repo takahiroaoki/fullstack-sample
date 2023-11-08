@@ -1,0 +1,14 @@
+{
+	"name": "project-format",
+	"dockerComposeFile": [
+		"../docker/docker-compose.local.yml"
+	],
+    "service": "web-frontend",
+	"workspaceFolder": "/frontend",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+			]
+		}
+	}
+}
