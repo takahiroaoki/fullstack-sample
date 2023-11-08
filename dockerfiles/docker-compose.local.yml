@@ -5,9 +5,9 @@ services:
     image: node:18.18.0-slim
     container_name: web-frontend
     volumes:
-      - ./src/frontend:/frontend
-      - ./src/main/resources/templates:/frontend/build/templates
-      - ./src/main/resources/static:/frontend/build/static
+      - ../frontend:/frontend
+      - ../backend/web/src/main/resources/templates:/frontend/build/templates
+      - ../backend/web/src/main/resources/static:/frontend/build/static
       - volume_trick:/frontend/node_modules
     working_dir: /frontend
     tty: true
