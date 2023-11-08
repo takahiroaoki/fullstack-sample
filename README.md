@@ -21,8 +21,8 @@ Frontend source is built on docker container.
 
 Frontend Build with development mode
 ```
-# @project-format/dockerfiles
-$ docker compose -f docker-compose.local.yml up -d
+# @project-format (Or, you can use devcontainer of VSCode)
+$ docker compose -f .devcontainer/docker-compose.local.yml up -d
 $ docker exec -it web-frontend /bin/bash
 
 # First time only
@@ -34,11 +34,11 @@ $ npm run dev
 
 Backend Build with development mode
 ```
-# @project-format/backend/web
+# @project-format/backend/demo
 $ mvn spring-boot:run
 ```
 
-Then get access to the demo page (http://localhost:8080/demo)
+Then get access to the sample page (http://localhost:8080/demo/sample)
 
 ## Architecture
 
@@ -78,7 +78,7 @@ The directories are split in the order of "Object Type -> Page -> Action".
 
 Some "common" packages will be made on the same layer as page or action.
 
-jp/co/company/web/
+demo/
 - controller/${page}/
   - ${Action}Controller.java
   - helper/${Action}Helper.java

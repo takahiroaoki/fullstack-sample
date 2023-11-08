@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  demo-frontend:
+    image: node:18.18.0-slim
+    container_name: demo-frontend
+    volumes:
+      - ../frontend:/frontend
+      - ../backend/web/src/main/resources/templates:/frontend/build/templates
+      - ../backend/web/src/main/resources/static:/frontend/build/static
+      - volume_trick:/frontend/node_modules
+    working_dir: /frontend
+    tty: true
+  demo-redis:
+    image: redis:7.2.2-alpine
+    container_name: demo-redis
+    volumes:
+      - redis_data:/data
+    ports:
+      - 6379:6379
+    tty: true
+
+volumes:
+  volume_trick:
+  redis_data:

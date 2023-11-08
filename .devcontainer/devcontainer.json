@@ -1,0 +1,15 @@
+{
+	"name": "project-format",
+	"dockerComposeFile": [
+		"docker-compose.local.yml"
+	],
+    "service": "demo-frontend",
+	"workspaceFolder": "/frontend",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.vscode-typescript-next"
+			]
+		}
+	}
+}
