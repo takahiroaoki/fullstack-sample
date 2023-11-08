@@ -1,9 +1,9 @@
-package jp.co.company.web.controller.sample.helper.item_list;
+package demo.controller.sample.helper.item_list;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import jp.co.company.web.controller.sample.response.item_list.component.Item;
+import demo.controller.sample.response.item_list.component.Item;
 
 public class ItemListHelper {
     public static List<Item> getItemList() {

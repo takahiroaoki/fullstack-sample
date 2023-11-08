@@ -1,13 +1,13 @@
-package jp.co.company.web.controller.sample;
+package demo.controller.sample;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import jp.co.company.web.controller.sample.helper.index.IndexHelper;
-import jp.co.company.web.controller.sample.response.index.View;
-import jp.co.company.web.dto.session.SampleSessionData;
+import demo.controller.sample.helper.index.IndexHelper;
+import demo.controller.sample.response.index.View;
+import demo.dto.session.SampleSessionData;
 
 @Controller
 @RequestMapping("/sample")

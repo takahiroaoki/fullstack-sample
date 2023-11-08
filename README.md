@@ -34,7 +34,7 @@ $ npm run dev
 
 Backend Build with development mode
 ```
-# @project-format/backend/web
+# @project-format/backend/demo
 $ mvn spring-boot:run
 ```
 
@@ -78,7 +78,7 @@ The directories are split in the order of "Object Type -> Page -> Action".
 
 Some "common" packages will be made on the same layer as page or action.
 
-jp/co/company/web/
+demo/
 - controller/${page}/
   - ${Action}Controller.java
   - helper/${Action}Helper.java

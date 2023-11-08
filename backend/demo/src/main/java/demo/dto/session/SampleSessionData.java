@@ -1,4 +1,4 @@
-package jp.co.company.web.dto.session;
+package demo.dto.session;
 
 import java.io.Serializable;
 
