@@ -1,5 +1,6 @@
 package demo.controller.sample;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,10 +19,10 @@ public class ItemListController {
     }
 
     @GetMapping({ "/items", "/items/" })
-    Ajax itemList() {
+    ResponseEntity<Ajax> itemList() {
         Ajax response = new Ajax();
         response.setItemList(ItemListHelper.getItemList());
         response.setText(sampleSessionData.getTest());
-        return response;
+        return ResponseEntity.ok().body(response);
     }
 }
