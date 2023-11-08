@@ -1,5 +1,5 @@
-<th:block th:fragment="greeting (componentId, data)">
-    <div class="greeting" th:componentId="${componentId}">
+<th:block th:fragment="greeting (ref, data)">
+    <div class="greeting" th:data-ref="${ref}">
         <p class="greeting__message" th:text="${data.message}"></p>
     </div>
 </th:block>

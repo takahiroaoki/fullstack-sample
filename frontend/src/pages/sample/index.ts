@@ -1,16 +1,19 @@
 import './index.scss'
 
 import { AxiosResponse, AxiosError } from "axios";
-import Greeting from './greeting/greeting'
-import AjaxUtil from '../../common/modules/ajax-util'
+import { Greeting } from './greeting/greeting'
+import { AjaxUtil } from '../../common/modules/ajax-util'
 
-(function Index() {
+const index = () => {
     // Mount components
-    const greeting: Greeting = new Greeting('greeting')
+    const greeting: Greeting = new Greeting(
+        document.querySelector('[data-ref=greeting]')!,
+        {},
+    )
 
     // Setting for components
-    greeting.onClick(() => {
-        AjaxUtil.getAxiosInstance().get('http://localhost:8080/demo/sample/items').then((res: AxiosResponse<any>) => {
+    greeting.on('custom_sample_click', () => {
+        AjaxUtil.getAxiosInstance().get('/demo/sample/items').then((res: AxiosResponse<any>) => {
             const { data, status } = res
             if (status === 200) {
                 console.log(data)
@@ -19,6 +22,6 @@ import AjaxUtil from '../../common/modules/ajax-util'
             console.log(e.message);
         })
     })
+}
 
-    // Sub methods for use in this function
-})()
+document.addEventListener('DOMContentLoaded', index)

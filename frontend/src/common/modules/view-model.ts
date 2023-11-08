@@ -1,53 +1,30 @@
 // replace this with base-component
 
-
-const EVENT_UPDATE_STATE = 'event_update_state'
-
-export type InternalEvent = {
-    event: string,
+export const EVENT_UPDATE_STATE = "view_event_update_state"
+export type EventSetting = {
     selector: string,
-    callback: Function,
+    eventName: string,
+    callback: EventListenerOrEventListenerObject,
 }
-
-export type ViewModelEvent = typeof EVENT_UPDATE_STATE
 
 export class ViewModel<T> {
     private elem: HTMLElement
     private state: T
+    private emitter = new EventTarget()
 
     constructor(
         elem: HTMLElement,
         initialState: T,
     ) {
         this.elem = elem
-        this.initInternalEvents()
         this.state = initialState
-        this.render()
-    }
-
-    private initInternalEvents(): void {
-        this.getInternalEvents().forEach((v) => {
-            this.getElementOf(v.selector).addEventListener(v.event, (e) => {
-                v.callback(e)
-            })
+        this.getEventSettings().forEach((e: EventSetting) => {
+            this.select(e.selector)?.addEventListener(e.eventName, e.callback)
         })
     }
 
-    protected getInternalEvents(): InternalEvent[] {
-        return []
-    }
-
-
-    protected emit(event: ViewModelEvent): void {
-        this.elem.dispatchEvent(new CustomEvent(event))
-    }
-
-    protected render(): void {
-        // rendering
-    }
-
-    public getElementOf(selector: string): HTMLElement {
-        return this.elem.querySelector(selector) as HTMLElement
+    public getState(): T {
+        return this.state
     }
 
     public setState(state: T, options: {
@@ -66,7 +43,20 @@ export class ViewModel<T> {
         }
     }
 
-    public getState(): T {
-        return this.state
+    public on(eventName: string, callback: EventListenerOrEventListenerObject): void {
+        this.emitter.addEventListener(eventName, callback)
     }
+
+    protected select(selector: string): HTMLElement | null {
+        return this.elem.querySelector(selector)
+    }
+
+    protected emit(eventName: string): void {
+        this.emitter.dispatchEvent(new CustomEvent(eventName))
+    }
+
+    protected getEventSettings(): EventSetting[] {
+        return []
+    }
+    protected render(): void { }
 }
