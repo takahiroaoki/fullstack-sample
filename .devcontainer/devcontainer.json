@@ -8,6 +8,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"ms-vscode.vscode-typescript-next"
 			]
 		}
 	}
