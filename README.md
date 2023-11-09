@@ -11,8 +11,6 @@
 - Webpack
 - Sass
 
-Frontend source is built on docker container.
-
 ### Backend
 - Java
 - Apache Maven
