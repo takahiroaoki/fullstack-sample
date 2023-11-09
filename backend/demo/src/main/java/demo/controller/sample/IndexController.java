@@ -8,15 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import demo.controller.sample.helper.index.IndexHelper;
 import demo.controller.sample.response.index.View;
 import demo.session.SampleSessionData;
+import lombok.AllArgsConstructor;
 
 @Controller
 @RequestMapping("/sample")
+@AllArgsConstructor
 public class IndexController {
     private final SampleSessionData sampleSessionData;
-
-    public IndexController(SampleSessionData sessionData) {
-        this.sampleSessionData = sessionData;
-    }
 
     @GetMapping({ "", "/" })
     String index(Model model) {

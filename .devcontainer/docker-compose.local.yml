@@ -11,6 +11,16 @@ services:
       - volume_trick:/frontend/node_modules
     working_dir: /frontend
     tty: true
+  demo-mysql:
+    image: mysql:8.0.33
+    container_name: demo-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    ports:
+      - 3306:3306
   demo-redis:
     image: redis:7.2.2-alpine
     container_name: demo-redis
