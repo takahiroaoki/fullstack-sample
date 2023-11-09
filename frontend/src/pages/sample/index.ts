@@ -11,19 +11,11 @@ const index = () => {
 
     // Setting for components
     greeting.on('custom_sample_click', () => {
-        AjaxUtil.getData('/demo/sample/items')
+        AjaxUtil
+            .getData('/demo/sample/items')
             .then((data) => {
                 console.log(data)
             })
-        /*
-        AjaxUtil.getAxiosInstance().get('/demo/sample/items').then((res: AxiosResponse<any>) => {
-            const { data, status } = res
-            if (status === 200) {
-                console.log(data)
-            }
-        }).catch((e: AxiosError<any>) => {
-            console.log(e.message);
-        })*/
     })
 }
 
