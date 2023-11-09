@@ -49,7 +49,7 @@ Then get access to the sample page (http://localhost:8080/demo/sample)
 
 ### Backend
 
-<img width="836" alt="image" src="https://github.com/takahiroaoki/project-format/assets/69064981/8cb2273c-e9f0-4c2a-82b7-e12d9fd670a0">
+<img width="950" alt="image" src="https://github.com/takahiroaoki/project-format/assets/69064981/39507e86-41fd-4095-9439-f5b5e3402af8">
 
 
 ## Directory
