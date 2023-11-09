@@ -1,5 +1,3 @@
-// replace this with base-component
-
 export const EVENT_UPDATE_STATE = "view_event_update_state"
 export type EventSetting = {
     selector: string,

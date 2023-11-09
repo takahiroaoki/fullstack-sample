@@ -1,13 +1,26 @@
-import axios, { AxiosInstance } from 'axios';
-
 export class AjaxUtil {
-    static getAxiosInstance = (): AxiosInstance => {
-        return axios.create({
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-            },
-            timeout: 5000,
+    static getData = (url: string): Promise<any> => {
+        return fetch(url).then((res: any) => {
+            if (!res.ok) {
+                throw new Error('NOT OK')
+            }
+            return res.json()
+        }).catch(() => {
+            console.log('Error')
+        })
+    }
+
+    static postData = (url: string, data = {}) => {
+        return fetch(url, {
+            method: 'POST',
+            body: JSON.stringify(data)
+        }).then((res: any) => {
+            if (!res.ok) {
+                throw new Error('NOT OK')
+            }
+            return res.json()
+        }).catch(() => {
+            console.log('Error')
         })
     }
 }
