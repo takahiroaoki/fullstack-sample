@@ -2,7 +2,7 @@
 
 ## Requirement
 - Docker Desktop
-- Amacon Corretto 17.0
+- Amazon Corretto 17.0
 - Apache Maven 3.9
 
 ## Tech Stack
