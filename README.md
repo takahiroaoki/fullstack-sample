@@ -16,10 +16,14 @@ Frontend source is built on docker container.
 ### Backend
 - Java
 - Apache Maven
+- MySQL
+- Redis
+
+※You should choose a database access way like ORM depending on the characteristic of the project.
 
 ## Development
 
-Frontend Build with development mode
+Start of docker container for local development
 ```
 # @project-format (Or, you can use devcontainer of VSCode)
 $ docker compose -f .devcontainer/docker-compose.local.yml up -d
