@@ -57,19 +57,20 @@ Then get access to the sample page (http://localhost:8080/demo/sample)
 
 The all html-files are copied into frontend/build/templates directory.
 
-The all ts-files are bundled and transpiled into frontend/build/static/pages/${page}/index.js.
+The all ts-files are bundled and transpiled into frontend/build/static/pages/[page]/index.js.
 
-The all scss-files are bundled and compiled into frontend/build/static/pages/${page}/index.css.
+The all scss-files are bundled and compiled into frontend/build/static/pages/[page]/index.css.
 
 The directory of frontend/build/ is bind-mounted to the directory of resources/ in backend source.
 
 frontend/src/
 - common/
-  - components/${component}/
+  - components/[component]/
   - layout/
+  - modules/
 - pages/
-  - ${page}/
-    - ${component}/
+  - [page]/
+    - [component]/
     - index.html, index.scss, index.ts
 
 ### Backend
@@ -79,17 +80,18 @@ The directories are split in the order of "Object Type -> Page -> Action".
 Some "common" packages will be made on the same layer as page or action.
 
 demo/
-- controller/${page}/
-  - ${Action}Controller.java
-  - helper/${Action}Helper.java
-- service/${page}/${Action}Service.java
-- dao/${page}/${action}/${TargetData}Dao.java
-- dto
-  - request/${page}/${Action}Param.java
-  - response/${page}/${action}/
-    - component/${Component}.java
-    - View.java | Ajax.java
-  - dxo_in/${page}/${action}/In${ServiceMethod}.java
-  - dxo_out/${page}/${action}/Out${ServiceMethod}.java
-  - dao_param/${page}/${action}/Prm${DaoMethod}.java
-  - dao_result/${page}/${action}/Rst${DaoMethod}.java
+- controller/[page]/
+  - [Action]Controller.java
+  - helper/[Action]Helper.java
+  - form/[Action]Form.java
+  - response/[action]/
+    - component/
+    - View.java
+    - Ajax.java
+- service/[page]/[action]/
+  - prm/[MethodName]Prm.java
+  - rst/[MethodName]Rst.java
+  - [SomeThing]Service.java
+- dao/[page]/[action]/[TargetData]Dao.java
+- session/[ObjectName].java
+- enum/[EnumName].java

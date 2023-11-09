@@ -1,6 +1,4 @@
 import './index.scss'
-
-import { AxiosResponse, AxiosError } from "axios";
 import { Greeting } from './greeting/greeting'
 import { AjaxUtil } from '../../common/modules/ajax-util'
 
@@ -13,14 +11,11 @@ const index = () => {
 
     // Setting for components
     greeting.on('custom_sample_click', () => {
-        AjaxUtil.getAxiosInstance().get('/demo/sample/items').then((res: AxiosResponse<any>) => {
-            const { data, status } = res
-            if (status === 200) {
+        AjaxUtil
+            .getData('/demo/sample/items')
+            .then((data) => {
                 console.log(data)
-            }
-        }).catch((e: AxiosError<any>) => {
-            console.log(e.message);
-        })
+            })
     })
 }
 

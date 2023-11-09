@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import demo.controller.sample.helper.index.IndexHelper;
 import demo.controller.sample.response.index.View;
-import demo.dto.session.SampleSessionData;
+import demo.session.SampleSessionData;
 
 @Controller
 @RequestMapping("/sample")
