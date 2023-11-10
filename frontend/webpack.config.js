@@ -66,5 +66,9 @@ module.exports = {
       filename: 'static/pages/[name]/index.css',
     }),
     new CleanWebpackPlugin(),
-  ]
+  ],
+  watchOptions: {
+    aggregateTimeout: 200,
+    poll: 1000,
+  },
 };
