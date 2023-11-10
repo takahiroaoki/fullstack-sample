@@ -19,6 +19,7 @@ export class ViewModel<T> {
         this.getEventSettings().forEach((e: EventSetting) => {
             this.select(e.selector)?.addEventListener(e.eventName, e.callback)
         })
+        this.render()
     }
 
     public getState(): T {

@@ -6,7 +6,7 @@ const index = () => {
     // Mount components
     const greeting: Greeting = new Greeting(
         document.querySelector('[data-ref=greeting]')!,
-        {},
+        { bold: false },
     )
 
     // Setting for components

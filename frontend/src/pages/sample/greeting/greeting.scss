@@ -5,5 +5,9 @@
 
     &__message {
         color: gold;
+
+        &--bold {
+            font-weight: bold;
+        }
     }
 }
