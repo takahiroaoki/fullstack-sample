@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-  th:replace="~{common/layout/layout :: layout (~{::customHead}, ~{::mainContents}, ~{::scripts})}">
+  th:replace="~{layouts/common/index :: layout (~{::customHead}, ~{::mainContents}, ~{::scripts})}">
 
 <!-- Add contents into head tag -->
 <th:block th:fragment="customHead">
