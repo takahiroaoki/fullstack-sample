@@ -25,7 +25,7 @@ Start of docker container for local development
 ```
 # @project-format (Or, you can use devcontainer of VSCode)
 $ docker compose -f .devcontainer/docker-compose.local.yml up -d
-$ docker exec -it web-frontend /bin/bash
+$ docker exec -it demo-frontend /bin/bash
 
 # First time only
 $ npm ci
