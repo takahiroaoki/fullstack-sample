@@ -3,6 +3,7 @@ const fs = require('fs')
 const glob = require('glob')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 // Get entry points as directory-names under src/pages
 function getEntry() {
@@ -55,7 +56,7 @@ module.exports = {
       },
       {
         test: /\.(scss|sass|css)$/,
-        use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
     ],
   },
@@ -64,5 +65,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'static/pages/[name]/index.css',
     }),
-  ]
+    new CleanWebpackPlugin(),
+  ],
+  watchOptions: {
+    aggregateTimeout: 200,
+    poll: 1000,
+  },
 };
