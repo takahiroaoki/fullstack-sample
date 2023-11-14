@@ -1,4 +1,4 @@
-import { EventSetting, ViewModel } from "../../../common/modules/view-model"
+import { EventSetting, ViewModel } from "../../../utils/view-model"
 
 type State = {
     bold: boolean
