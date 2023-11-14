@@ -1,6 +1,6 @@
 import './index.scss'
 import { Greeting } from './greeting/greeting'
-import { AjaxUtil } from '../../common/modules/ajax-util'
+import { AjaxUtil } from '../../utils/ajax-util'
 
 const index = () => {
     // Mount components
