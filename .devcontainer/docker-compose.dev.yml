@@ -7,9 +7,9 @@ services:
       dockerfile: Dockerfile
     container_name: demo-app
     volumes:
-      - ../app:/app
-      - volume_trick:/app/frontend/node_modules
-    working_dir: /app
+      - ..:/mnt
+      - volume_trick:/mnt/app/frontend/node_modules
+    working_dir: /mnt
     ports:
       - 8080:8080
     depends_on:
