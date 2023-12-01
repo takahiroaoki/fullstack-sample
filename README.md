@@ -2,8 +2,6 @@
 
 ## Requirement
 - Docker Desktop
-- Amazon Corretto 17.0
-- Apache Maven 3.9
 
 ## Tech Stack
 ### Frontend
@@ -36,7 +34,10 @@ $ cd /app/frontend && npm run dev
 
 Backend Build with development mode
 ```
-# @project-format/backend/demo
+# First time only
+$ cd /app/backend/demo && mvn clean install
+
+# Boot up application
 $ mvn spring-boot:run
 ```
 
@@ -65,7 +66,7 @@ The all scss-files are bundled and compiled into frontend/build/static/pages/[pa
 
 The directories under frontend/build/ are copied to the directory of resources/ in backend source.
 
-frontend/src/
+app/frontend/src/
 - common/
   - components/[component]/
   - layout/

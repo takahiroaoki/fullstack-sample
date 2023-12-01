@@ -2,12 +2,19 @@ version: '3.8'
 
 services:
   demo-app:
-    image: node:18.18.0-slim
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: demo-app
     volumes:
       - ../app:/app
       - volume_trick:/app/frontend/node_modules
     working_dir: /app
+    ports:
+      - 8080:8080
+    depends_on:
+      - demo-mysql
+      - demo-redis
     tty: true
   demo-mysql:
     image: mysql:8.0.33
