@@ -3,12 +3,13 @@
 	"dockerComposeFile": [
 		"docker-compose.local.yml"
 	],
-    "service": "demo-frontend",
-	"workspaceFolder": "/frontend",
+    "service": "demo-app",
+	"workspaceFolder": "/app",
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ms-vscode.vscode-typescript-next"
+				"ms-vscode.vscode-typescript-next",
+				"vscjava.vscode-java-pack"
 			]
 		}
 	}

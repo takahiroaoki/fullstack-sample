@@ -4,6 +4,10 @@ const glob = require('glob')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const CopyFilePlugin = require("copy-webpack-plugin")
+
+const buildDir = path.resolve(__dirname, 'build')
+const targetDir = path.resolve(__dirname, '../backend/demo/src/main/resources')
 
 // Get entry points as directory-names under src/pages
 function getEntry() {
@@ -41,7 +45,7 @@ function getHtmlWebpackPlugin() {
 module.exports = {
   entry: getEntry(),
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: buildDir,
     filename: 'static/pages/[name]/index.js',
   },
   resolve: {
@@ -66,6 +70,14 @@ module.exports = {
       filename: 'static/pages/[name]/index.css',
     }),
     new CleanWebpackPlugin(),
+    new CopyFilePlugin({
+      patterns: [
+        {
+          from: buildDir,
+          to: targetDir,
+        },
+      ],
+    }),
   ],
   watchOptions: {
     aggregateTimeout: 200,
