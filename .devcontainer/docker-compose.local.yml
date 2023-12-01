@@ -1,15 +1,13 @@
 version: '3.8'
 
 services:
-  demo-frontend:
+  demo-app:
     image: node:18.18.0-slim
-    container_name: demo-frontend
+    container_name: demo-app
     volumes:
-      - ../frontend:/frontend
-      - ../backend/demo/src/main/resources/templates:/frontend/build/templates
-      - ../backend/demo/src/main/resources/static:/frontend/build/static
-      - volume_trick:/frontend/node_modules
-    working_dir: /frontend
+      - ../app:/app
+      - volume_trick:/app/frontend/node_modules
+    working_dir: /app
     tty: true
   demo-mysql:
     image: mysql:8.0.33

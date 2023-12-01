@@ -3,8 +3,8 @@
 	"dockerComposeFile": [
 		"docker-compose.local.yml"
 	],
-    "service": "demo-frontend",
-	"workspaceFolder": "/frontend",
+    "service": "demo-app",
+	"workspaceFolder": "/app",
 	"customizations": {
 		"vscode": {
 			"extensions": [
