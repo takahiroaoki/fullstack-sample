@@ -19,26 +19,26 @@
 
 ## Development
 
-Start of docker container for local development
+Start of docker container for development
 ```
 # @project-format (Or, you can use devcontainer of VSCode)
-$ docker compose -f .devcontainer/docker-compose.local.yml up -d
+$ docker compose -f .devcontainer/docker-compose.dev.yml up -d
 $ docker exec -it demo-app /bin/bash
 
 # First time only
-$ cd /app/frontend && npm ci
+$ cd /mnt/app/frontend && npm ci
 
 # Build frontend source with watch mode
-$ cd /app/frontend && npm run dev
+$ cd /mnt/app/frontend && npm run dev
 ```
 
 Backend Build with development mode
 ```
 # First time only
-$ cd /app/backend/demo && mvn clean install
+$ cd /mnt/app/backend/demo && mvn clean install
 
 # Boot up application
-$ mvn spring-boot:run
+$ cd /mnt/app/backend/demo && mvn spring-boot:run
 ```
 
 Then get access to the sample page (http://localhost:8080/demo/sample)

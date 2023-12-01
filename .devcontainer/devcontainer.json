@@ -1,10 +1,10 @@
 {
 	"name": "project-format",
 	"dockerComposeFile": [
-		"docker-compose.local.yml"
+		"docker-compose.dev.yml"
 	],
     "service": "demo-app",
-	"workspaceFolder": "/app",
+	"workspaceFolder": "/mnt",
 	"customizations": {
 		"vscode": {
 			"extensions": [
