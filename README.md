@@ -25,13 +25,13 @@ Start of docker container for local development
 ```
 # @project-format (Or, you can use devcontainer of VSCode)
 $ docker compose -f .devcontainer/docker-compose.local.yml up -d
-$ docker exec -it demo-frontend /bin/bash
+$ docker exec -it demo-app /bin/bash
 
 # First time only
-$ npm ci
+$ cd /app/frontend && npm ci
 
 # Build frontend source with watch mode
-$ npm run dev
+$ cd /app/frontend && npm run dev
 ```
 
 Backend Build with development mode
@@ -63,7 +63,7 @@ The all ts-files are bundled and transpiled into frontend/build/static/pages/[pa
 
 The all scss-files are bundled and compiled into frontend/build/static/pages/[page]/index.css.
 
-The directory of frontend/build/ is bind-mounted to the directory of resources/ in backend source.
+The directories under frontend/build/ are copied to the directory of resources/ in backend source.
 
 frontend/src/
 - common/
