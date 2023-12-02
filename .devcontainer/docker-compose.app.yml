@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  demo-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    container_name: demo-app
+    volumes:
+      - ..:/mnt
+      - volume_trick:/mnt/app/frontend/node_modules
+    working_dir: /mnt
+    ports:
+      - 8080:8080
+    depends_on:
+      - demo-mysql
+      - demo-redis
+    tty: true
+
+volumes:
+  volume_trick:
