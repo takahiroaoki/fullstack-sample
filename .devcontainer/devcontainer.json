@@ -1,7 +1,8 @@
 {
 	"name": "project-format",
 	"dockerComposeFile": [
-		"docker-compose.dev.yml"
+		"docker-compose.infra.yml",
+		"docker-compose.app.yml"
 	],
     "service": "demo-app",
 	"workspaceFolder": "/mnt",

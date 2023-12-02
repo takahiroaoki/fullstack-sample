@@ -1,11 +1,5 @@
+# FIXME: fix these settings for production mode
 spring:
-  thymeleaf:
-    cache: false
-  web:
-    resources:
-      cache:
-        cachecontrol:
-          no-cache: true
   data:
     redis:
       host: localhost

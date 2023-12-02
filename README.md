@@ -22,7 +22,8 @@
 Start of docker container for development
 ```
 # @project-format (Or, you can use devcontainer of VSCode)
-$ docker compose -f .devcontainer/docker-compose.dev.yml up -d
+$ docker compose -f .devcontainer/docker-compose.infra.yml up -d
+$ docker compose -f .devcontainer/docker-compose.app.yml up -d
 $ docker exec -it demo-app /bin/bash
 
 # First time only
@@ -42,6 +43,14 @@ $ cd /mnt/app/backend/demo && mvn spring-boot:run
 ```
 
 Then get access to the sample page (http://localhost:8080/demo/sample)
+
+## Deployment
+```
+$ docker build -t ${image-name} -f Dockerfile.prod .
+$ docker run -p8080:8080 ${image-name}
+```
+
+Then get access to the sample page (http://${the server domain}/demo/sample)
 
 ## Architecture
 
