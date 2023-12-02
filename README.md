@@ -44,6 +44,14 @@ $ cd /mnt/app/backend/demo && mvn spring-boot:run
 
 Then get access to the sample page (http://localhost:8080/demo/sample)
 
+## Deployment
+```
+$ docker build -t ${image-name} -f Dockerfile.prod .
+$ docker run -p8080:8080 ${image-name}
+```
+
+Then get access to the sample page (http://${the server domain}/demo/sample)
+
 ## Architecture
 
 ### Frontend
