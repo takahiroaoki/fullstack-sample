@@ -1,12 +1,5 @@
-# Frontend cache control
+# FIXME: fix these settings for production mode
 spring:
-  thymeleaf:
-    cache: false
-  web:
-    resources:
-      cache:
-        cachecontrol:
-          no-cache: true
   data:
     redis:
       host: localhost
@@ -22,5 +15,5 @@ spring:
       schema-locations:
         - classpath:database/schema.sql
       data-locations:
-        - classpath:database/data.dev.sql
+        - classpath:database/data.local.sql
       encoding: UTF-8
