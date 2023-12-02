@@ -9,11 +9,3 @@ spring:
     username: dev-user
     password: password
     driver-class-name: com.mysql.cj.jdbc.Driver
-  sql:
-    init:
-      mode: always
-      schema-locations:
-        - classpath:database/schema.sql
-      data-locations:
-        - classpath:database/data.local.sql
-      encoding: UTF-8
