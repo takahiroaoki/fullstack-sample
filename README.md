@@ -44,9 +44,12 @@ $ cd /mnt/app/backend/demo && mvn spring-boot:run
 
 Then get access to the sample page (http://localhost:8080/demo/sample)
 
-## Deployment
+## Build Image for Deploy
 ```
-$ docker build -t ${image-name} -f Dockerfile.prod .
+# @project-format
+$ docker build -t ${image-name} -f ./deploy/docker/Dockerfile ../..
+
+# after pull of the image above, run the image in the production server
 $ docker run -p8080:8080 ${image-name}
 ```
 
