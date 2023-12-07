@@ -1,4 +1,4 @@
-FROM amazoncorretto:17-al2023
+FROM amazoncorretto:21-al2023
 
 RUN yum update && yum install -y \
     maven-1:3.8.4-3.amzn2023.0.5 \
