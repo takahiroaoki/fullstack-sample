@@ -1,12 +1,10 @@
-# first stage for build
-FROM openjdk:21-slim as build
+FROM amazoncorretto:17-al2023
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    maven=3.8.7-1 \
-    nodejs=18.13.0+dfsg1-1 \
-    npm=9.2.0~ds1-1 \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+RUN yum update && yum install -y \
+    maven-1:3.8.4-3.amzn2023.0.5 \
+    nodejs-1:18.18.2-1.amzn2023.0.1 \
+    && rm -rf /var/cache/yum/* \
+    && yum clean all
 
 COPY ./app/ /mnt/app/
 
@@ -19,11 +17,18 @@ WORKDIR /mnt/app/backend/demo
 RUN mvn clean install && mvn package spring-boot:repackage -Dspring.profiles.active=prod
 
 # second stage for boot up
-FROM openjdk:21-slim
+FROM amazoncorretto:17-al2023
+
+RUN yum update && yum install -y \
+    shadow-utils-2:4.9-12.amzn2023.0.2 \
+    tar-2:1.34-1.amzn2023.0.3 \
+    gzip-1.12-1.amzn2023.0.1 \
+    && rm -rf /var/cache/yum/* \
+    && yum clean all
 
 ARG USERNAME=prod-user
 
-RUN useradd -m $USERNAME
+RUN useradd $USERNAME
 
 USER $USERNAME
 
