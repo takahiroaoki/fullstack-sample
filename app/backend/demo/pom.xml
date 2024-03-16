@@ -56,7 +56,7 @@
 		</dependency>
 		<dependency>
 			<groupId>jp.co.company</groupId>
-			<artifactId>mybatis-generator</artifactId>
+			<artifactId>database</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>

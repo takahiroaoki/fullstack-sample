@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <classPathEntry location="/root/.m2/repository/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar" />
+    <context id="context1" targetRuntime="MyBatis3">
+        <plugin type="org.mybatis.generator.plugins.MapperAnnotationPlugin"/>
+        <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin"/>
+        <commentGenerator>
+            <property name="suppressDate" value="true" />
+            <property name="addRemarkComments" value="false" />
+        </commentGenerator>
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver" connectionURL="jdbc:mysql://demo-mysql/demodb" userId="dev-user" password="password" />
+        <javaModelGenerator targetPackage="database.entity.gen" targetProject="src/main/java/" />
+        <sqlMapGenerator targetPackage="database.mapper.gen" targetProject="src/main/resources/" />
+        <javaClientGenerator targetPackage="database.mapper.gen" targetProject="src/main/java/" type="XMLMAPPER" />
+        <table tableName="USER" modelType="hierarchical" />
+    </context>
+</generatorConfiguration>

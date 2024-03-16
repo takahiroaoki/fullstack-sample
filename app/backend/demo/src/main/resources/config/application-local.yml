@@ -11,15 +11,7 @@ spring:
       host: localhost
       port: 6379
   datasource:
-    url: jdbc:mysql://localhost:3306/demodb
+    url: jdbc:mysql://demo-mysql/demodb
     username: dev-user
     password: password
     driver-class-name: com.mysql.cj.jdbc.Driver
-  sql:
-    init:
-      mode: always
-      schema-locations:
-        - classpath:database/schema.sql
-      data-locations:
-        - classpath:database/data.local.sql
-      encoding: UTF-8
