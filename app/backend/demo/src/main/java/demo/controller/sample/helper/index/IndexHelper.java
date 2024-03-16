@@ -1,6 +1,6 @@
 package demo.controller.sample.helper.index;
 
-import demo.controller.sample.response.index.component.Greeting;
+import demo.dto.response.index.component.Greeting;
 
 public class IndexHelper {
     public static Greeting getGreeting() {

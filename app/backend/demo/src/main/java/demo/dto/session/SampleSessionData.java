@@ -1,4 +1,4 @@
-package demo.session;
+package demo.dto.session;
 
 import java.io.Serializable;
 

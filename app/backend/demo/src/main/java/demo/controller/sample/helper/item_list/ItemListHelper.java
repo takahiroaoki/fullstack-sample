@@ -3,7 +3,7 @@ package demo.controller.sample.helper.item_list;
 import java.util.ArrayList;
 import java.util.List;
 
-import demo.controller.sample.response.item_list.component.Item;
+import demo.dto.response.item_list.component.Item;
 
 public class ItemListHelper {
     public static List<Item> getItemList() {

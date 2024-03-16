@@ -1,4 +1,4 @@
-package demo.controller.sample.response.item_list.component;
+package demo.dto.response.item_list.component;
 
 import lombok.Data;
 

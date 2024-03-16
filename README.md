@@ -95,18 +95,23 @@ The directories are split in the order of "Object Type -> Page -> Action".
 Some "common" packages will be made on the same layer as page or action.
 
 demo/
-- controller/[page]/
-  - [Action]Controller.java
-  - helper/[Action]Helper.java
-  - form/[Action]Form.java
-  - response/[action]/
+- controller/
+  - [Page][Action]Controller.java
+  - helper/[Page][Action]Helper.java
+- service/[Page][Action]Service.java
+- repository/
+  - Custom[TargetData]Dao.java
+  - mapper/Custom[TargetData]Mapper.java
+- dto/
+  - form/[Page][Action]Form.java
+  - response/[page]/[action]/
     - component/
     - View.java
     - Ajax.java
-- service/[page]/[action]/
-  - prm/[MethodName]Prm.java
-  - rst/[MethodName]Rst.java
-  - [SomeThing]Service.java
-- dao/[page]/[action]/[TargetData]Dao.java
-- session/[ObjectName].java
-- enum/[EnumName].java
+  - session/[ObjectName].java
+  - service/[page]/[action]/
+    - [Method]Arg.java
+    - [Method]Rst.java
+  - repository/[page]/[action]/
+    - [Method]Arg.java
+    - [Method]Rst.java
