@@ -4,6 +4,6 @@ This is a directory that contains common modules for data layer, like mappers, e
 
 ## Auto generate by MyBatis
 ```
-# @./database
+# @./data-layer
 $ mvn mybatis-generator:generate
 ```
