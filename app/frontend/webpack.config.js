@@ -7,7 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyFilePlugin = require("copy-webpack-plugin")
 
 const buildDir = path.resolve(__dirname, 'build')
-const targetDir = path.resolve(__dirname, '../backend/demo/src/main/resources')
+const targetDir = path.resolve(__dirname, '../backend/src/main/resources')
 
 // Get entry points as directory-names under src/pages
 function getEntry() {
