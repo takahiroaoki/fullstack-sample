@@ -3,5 +3,5 @@
 cd /mnt/data-layer
 mvn clean install
 
-cd /mnt/app/backend/demo
+cd /mnt/app/backend
 mvn clean spring-boot:run
