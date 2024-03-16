@@ -1,8 +1,8 @@
-package database.mapper.gen;
+package gen.mapper;
 
-import database.entity.gen.User;
-import database.entity.gen.UserExample;
-import database.entity.gen.UserKey;
+import gen.entity.User;
+import gen.entity.UserExample;
+import gen.entity.UserKey;
 import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;

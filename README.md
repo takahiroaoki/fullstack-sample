@@ -35,7 +35,7 @@ $ cd /mnt/app/frontend && npm run dev
 Backend Build with development mode
 ```
 # First time only
-$ cd /mnt/mybatis-generator && mvn clean install
+$ cd /mnt/data-layer && mvn clean install
 $ cd /mnt/app/backend/demo && mvn clean install
 
 # Boot up application

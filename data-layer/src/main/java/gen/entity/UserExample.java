@@ -1,4 +1,4 @@
-package database.entity.gen;
+package gen.entity;
 
 import java.util.ArrayList;
 import java.util.List;
