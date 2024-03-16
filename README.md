@@ -11,11 +11,10 @@
 
 ### Backend
 - Java
+- MyBatis
 - Apache Maven
 - MySQL
 - Redis
-
-※You should choose a database access way like ORM depending on the characteristic of the project.
 
 ## Development
 
@@ -36,6 +35,7 @@ $ cd /mnt/app/frontend && npm run dev
 Backend Build with development mode
 ```
 # First time only
+$ cd /mnt/mybatis-generator && mvn clean install
 $ cd /mnt/app/backend/demo && mvn clean install
 
 # Boot up application
