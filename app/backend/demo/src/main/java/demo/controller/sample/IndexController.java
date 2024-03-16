@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import demo.controller.sample.helper.index.IndexHelper;
-import demo.controller.sample.response.index.View;
-import demo.session.SampleSessionData;
+import demo.dto.response.index.View;
+import demo.dto.session.SampleSessionData;
 import lombok.AllArgsConstructor;
 
 @Controller

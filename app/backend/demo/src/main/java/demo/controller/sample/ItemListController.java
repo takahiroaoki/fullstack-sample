@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import demo.controller.sample.helper.item_list.ItemListHelper;
-import demo.controller.sample.response.item_list.Ajax;
-import demo.session.SampleSessionData;
+import demo.dto.response.item_list.Ajax;
+import demo.dto.session.SampleSessionData;
 
 @RestController
 @RequestMapping("/sample")
