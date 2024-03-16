@@ -10,10 +10,10 @@
 		<!-- lookup parent from repository -->
 	</parent>
 	<groupId>jp.co.company</groupId>
-	<artifactId>mybatis-generator</artifactId>
+	<artifactId>database</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>mybatis-generator</name>
+	<name>database</name>
 	<description>common java resources</description>
 	<properties>
 		<java.version>17</java.version>
