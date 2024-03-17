@@ -11,9 +11,9 @@
             <property name="addRemarkComments" value="false" />
         </commentGenerator>
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver" connectionURL="jdbc:mysql://demo-mysql/demodb" userId="dev-user" password="password" />
-        <javaModelGenerator targetPackage="gen.entity" targetProject="src/main/java/" />
-        <sqlMapGenerator targetPackage="gen.mapper" targetProject="src/main/resources/" />
-        <javaClientGenerator targetPackage="gen.mapper" targetProject="src/main/java/" type="XMLMAPPER" />
+        <javaModelGenerator targetPackage="entity.gen" targetProject="src/main/java/" />
+        <sqlMapGenerator targetPackage="mapper.gen" targetProject="src/main/resources/" />
+        <javaClientGenerator targetPackage="mapper.gen" targetProject="src/main/java/" type="XMLMAPPER" />
         <table tableName="USER" modelType="hierarchical" />
     </context>
 </generatorConfiguration>

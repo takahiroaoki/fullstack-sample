@@ -82,7 +82,7 @@ demo/
   - helper/[Page][Action]Helper.java
 - service/[Page][Action]Service.java
 - repository/
-  - Custom[TargetData]Dao.java
+  - Custom[TargetData]Repository.java
   - mapper/Custom[TargetData]Mapper.java
 - dto/
   - form/[Page][Action]Form.java
