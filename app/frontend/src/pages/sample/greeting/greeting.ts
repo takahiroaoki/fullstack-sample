@@ -1,6 +1,10 @@
 import { EventSetting, ViewModel } from "../../../utils/view-model"
+import yup from "../../../utils/yup.custom"
+import { globalSchema } from "../../../utils/schema"
 
-type State = {
+const schema = globalSchema.pick(['sampleInput'])
+
+type State = yup.InferType<typeof schema> & {
     bold: boolean
 }
 

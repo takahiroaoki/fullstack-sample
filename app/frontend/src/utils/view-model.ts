@@ -26,14 +26,15 @@ export class ViewModel<T> {
         return this.state
     }
 
-    public setState(state: T, options: {
+    public setState(partial: Partial<T>, options: {
         render: boolean,
         emit: boolean,
     } = {
             render: true,
             emit: true
         }) {
-        this.state = state
+        const newState = { ...this.state, ...partial }
+        this.state = newState
         if (options.render) {
             this.render()
         }
