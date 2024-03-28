@@ -1,6 +1,6 @@
-import { EventSetting, ViewModel } from "../../../utils/view-model"
-import yup from "../../../utils/yup.custom"
-import { globalSchema } from "../../../utils/schema"
+import { EventSetting, ViewModel } from "@src/utils/view-model"
+import yup from "@src/utils/yup.custom"
+import { globalSchema } from "@src/utils/schema"
 
 const schema = globalSchema.pick(['sampleInput'])
 
