@@ -6,17 +6,18 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyFilePlugin = require("copy-webpack-plugin")
 
-const buildDir = path.resolve(__dirname, 'build')
-const targetDir = path.resolve(__dirname, '../backend/src/main/resources')
+const baseDir = __dirname
+const buildDir = path.resolve(baseDir, 'build')
+const targetDir = path.resolve(baseDir, '../backend/src/main/resources')
 
 // Get entry points as directory-names under src/pages
 function getEntry() {
-  const pages = fs.readdirSync(path.join(__dirname, 'src/pages')).filter((file) => {
-    return fs.statSync(path.join(__dirname, 'src/pages', file)).isDirectory()
+  const pages = fs.readdirSync(path.join(baseDir, 'src/pages')).filter((file) => {
+    return fs.statSync(path.join(baseDir, 'src/pages', file)).isDirectory()
   })
   const entry = {}
   for (const page of pages) {
-    const file = path.resolve(__dirname, `src/pages/${page}/index.ts`)
+    const file = path.resolve(baseDir, `src/pages/${page}/index.ts`)
     if (fs.existsSync(file)) {
       entry[page] = file
     }
@@ -26,7 +27,7 @@ function getEntry() {
 
 // Get html files under /src in order to move them to ../main/resources/templates
 function getHtmlWebpackPlugin() {
-  const htmlFiles = glob.sync(path.resolve(__dirname, 'src/**/*.html'))
+  const htmlFiles = glob.sync(path.resolve(baseDir, 'src/**/*.html'))
   const entry = []
   for (const file of htmlFiles) {
     entry.push(
