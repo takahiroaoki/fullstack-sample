@@ -7,6 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyFilePlugin = require("copy-webpack-plugin")
 
 const baseDir = __dirname
+const srcDir = path.resolve(baseDir, 'src')
 const buildDir = path.resolve(baseDir, 'build')
 const targetDir = path.resolve(baseDir, '../backend/src/main/resources')
 
@@ -51,6 +52,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js'],
+    alias: {
+      '@src': srcDir,
+    }
   },
   module: {
     rules: [
