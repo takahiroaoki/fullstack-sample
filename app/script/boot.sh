@@ -1,7 +1,10 @@
 #/bin/sh
 
+cd /mnt/app/frontend
+npm run build
+
 cd /mnt/data-layer
-mvn clean install
+mvn -T 4 clean install
 
 cd /mnt/app/backend
-mvn clean spring-boot:run
+mvn -T 4  clean spring-boot:run

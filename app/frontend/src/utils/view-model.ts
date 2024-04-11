@@ -1,8 +1,14 @@
-export const EVENT_UPDATE_STATE = "view_event_update_state"
+export const EVENT_UPDATE_STATE = "event_update_state"
+
 export type EventSetting = {
     selector: string,
     eventName: string,
     callback: EventListenerOrEventListenerObject,
+}
+
+type SetStateOptions = {
+    render: boolean
+    emit: boolean
 }
 
 export class ViewModel<T> {
@@ -16,23 +22,36 @@ export class ViewModel<T> {
     ) {
         this.elem = elem
         this.state = initialState
+
         this.getEventSettings().forEach((e: EventSetting) => {
             this.select(e.selector)?.addEventListener(e.eventName, e.callback)
         })
-        this.render()
     }
+
+    protected initialize(): void {}
+
+    protected select(selector: string): HTMLElement | null {
+        return this.elem.querySelector(selector)
+    }
+
+    protected emit(eventName: string): void {
+        this.emitter.dispatchEvent(new CustomEvent(eventName))
+    }
+
+    protected getEventSettings(): EventSetting[] {
+        return []
+    }
+
+    protected render(): void {}
 
     public getState(): T {
         return this.state
     }
 
-    public setState(partial: Partial<T>, options: {
-        render: boolean,
-        emit: boolean,
-    } = {
-            render: true,
-            emit: true
-        }) {
+    public setState(partial: Partial<T>, options: SetStateOptions = {
+        render: true,
+        emit: true,
+    }) {
         const newState = { ...this.state, ...partial }
         this.state = newState
         if (options.render) {
@@ -46,17 +65,4 @@ export class ViewModel<T> {
     public on(eventName: string, callback: EventListenerOrEventListenerObject): void {
         this.emitter.addEventListener(eventName, callback)
     }
-
-    protected select(selector: string): HTMLElement | null {
-        return this.elem.querySelector(selector)
-    }
-
-    protected emit(eventName: string): void {
-        this.emitter.dispatchEvent(new CustomEvent(eventName))
-    }
-
-    protected getEventSettings(): EventSetting[] {
-        return []
-    }
-    protected render(): void { }
 }

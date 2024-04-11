@@ -11,7 +11,8 @@
 			"extensions": [
 				"ms-vscode.vscode-typescript-next",
 				"vscjava.vscode-java-pack",
-				"ms-azuretools.vscode-docker"
+				"ms-azuretools.vscode-docker",
+				"esbenp.prettier-vscode"
 			]
 		}
 	}
