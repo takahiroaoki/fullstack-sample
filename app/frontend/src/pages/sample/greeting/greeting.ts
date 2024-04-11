@@ -4,7 +4,7 @@ import { globalSchema } from "@src/utils/schema"
 
 const schema = globalSchema.pick(['sampleInput'])
 
-type State = yup.InferType<typeof schema> & {
+export type State = yup.InferType<typeof schema> & {
     bold: boolean
 }
 
@@ -26,6 +26,7 @@ export class Greeting extends ViewModel<State> {
     }
 
     protected render(): void {
-        this.select('.greeting__message')?.classList.toggle('greeting__message--bold', this.getState().bold)
+        const { bold } = this.getState()
+        this.select('.greeting__message')?.classList.toggle('greeting__message--bold', bold)
     }
 }
