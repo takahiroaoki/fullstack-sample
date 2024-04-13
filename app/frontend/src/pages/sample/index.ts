@@ -1,5 +1,5 @@
 import './index.scss'
-import { Greeting } from './greeting/greeting'
+import { EVENT_SAMPLE_CLICK, Greeting } from './greeting/greeting'
 import { AjaxUtil } from '@src/utils/ajax-util'
 
 const index = () => {
@@ -13,7 +13,7 @@ const index = () => {
     )
 
     // Setting for components
-    greeting.on('custom_sample_click', () => {
+    greeting.on(EVENT_SAMPLE_CLICK, () => {
         AjaxUtil
             .getData('/demo/sample/items')
             .then((data) => {

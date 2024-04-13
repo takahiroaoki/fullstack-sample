@@ -4,6 +4,8 @@ import { globalSchema } from "@src/utils/schema"
 
 const schema = globalSchema.pick(['sampleInput'])
 
+export const EVENT_SAMPLE_CLICK = 'custom_sample_click'
+
 export type State = yup.InferType<typeof schema> & {
     bold: boolean
 }
@@ -19,7 +21,7 @@ export class Greeting extends ViewModel<State> {
                     this.setState({
                         bold: !this.getState().bold
                     })
-                    this.emit('custom_sample_click')
+                    this.emit(EVENT_SAMPLE_CLICK)
                 }
             },
         ]
