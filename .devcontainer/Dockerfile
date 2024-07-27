@@ -5,5 +5,6 @@ RUN yum update && yum install -y \
     nodejs-1:18.18.2-1.amzn2023.0.1 \
     tar-2:1.34-1.amzn2023.0.3 \
     git-2.40.1-1.amzn2023.0.1 \
+    make.x86_64 \
     && rm -rf /var/cache/yum/* \
     && yum clean all

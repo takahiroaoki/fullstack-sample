@@ -23,16 +23,10 @@ $ docker compose -f .devcontainer/docker-compose.app.yml up -d
 $ docker exec -it demo-app /bin/bash
 
 # First time only
-$ cd /mnt/app/frontend && npm ci
+$ make app-front-install
 
-# Build frontend source with watch mode
-$ cd /mnt/app/frontend && npm run dev
-```
-
-Backend Build with development mode
-```
 # Boot up application
-$ sh /mnt/app/script/boot.sh
+$ make app-run
 ```
 
 Then get access to the sample page (http://localhost:8080/demo/sample)
