@@ -1,5 +1,5 @@
 {
-	"name": "project-format",
+	"name": "fullstack-sample",
 	"dockerComposeFile": [
 		"docker-compose.infra.yml",
 		"docker-compose.app.yml"

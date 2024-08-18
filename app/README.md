@@ -17,7 +17,7 @@
 
 Start of docker container for development
 ```
-# @project-format (Or, you can use devcontainer of VSCode)
+# @fullstack-sample (Or, you can use devcontainer of VSCode)
 $ docker compose -f .devcontainer/docker-compose.infra.yml up -d
 $ docker compose -f .devcontainer/docker-compose.app.yml up -d
 $ docker exec -it demo-app /bin/bash
@@ -35,12 +35,12 @@ Then get access to the sample page (http://localhost:8080/demo/sample)
 
 ### Frontend
 
-<img width="355" alt="image" src="https://github.com/takahiroaoki/project-format/assets/69064981/b588f240-0a39-4208-8c11-e124a3504cac">
+<img width="355" alt="image" src="https://github.com/takahiroaoki/fullstack-sample/assets/69064981/b588f240-0a39-4208-8c11-e124a3504cac">
 
 
 ### Backend
 
-<img width="950" alt="image" src="https://github.com/takahiroaoki/project-format/assets/69064981/39507e86-41fd-4095-9439-f5b5e3402af8">
+<img width="950" alt="image" src="https://github.com/takahiroaoki/fullstack-sample/assets/69064981/39507e86-41fd-4095-9439-f5b5e3402af8">
 
 
 ## Directory
