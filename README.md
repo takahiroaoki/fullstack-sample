@@ -1,8 +1,6 @@
-# project-format
-This is a typical project written in Java.
+# fullstack-sample
+This is a typical full-stack sample project written in Java and TypeScript.
 The modules or applications in this repository are supposed to share the same database.
-
-You can also make directory in this repository which contains front application without any databases.
 
 ## Requirement
 - Docker Desktop
