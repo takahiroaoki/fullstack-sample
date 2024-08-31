@@ -4,6 +4,9 @@ The modules or applications in this repository are supposed to share the same da
 
 ## Requirement
 - Docker Desktop
+- VSCode & Dev Container Extension
+
+※The maintainer uses codespaces.
 
 ## Modules
 ### data-layer
