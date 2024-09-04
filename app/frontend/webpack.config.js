@@ -9,7 +9,6 @@ const CopyFilePlugin = require("copy-webpack-plugin")
 const baseDir = __dirname
 const srcDir = path.resolve(baseDir, 'src')
 const buildDir = path.resolve(baseDir, 'build')
-const targetDir = path.resolve(baseDir, '../backend/src/main/resources')
 
 // Get entry points as directory-names under src/pages
 function getEntry() {
@@ -74,14 +73,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'static/pages/[name]/index.css',
     }),
-    new CleanWebpackPlugin(),
-    new CopyFilePlugin({
-      patterns: [
-        {
-          from: buildDir,
-          to: targetDir,
-        },
-      ],
+    new CleanWebpackPlugin({
+      dry: true,
     }),
   ],
   watchOptions: {
